@@ -14,6 +14,10 @@
 		162184121CFFE831003440D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 162184101CFFE831003440D6 /* LaunchScreen.storyboard */; };
 		1621841D1CFFE831003440D6 /* ContainerViewControllerSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1621841C1CFFE831003440D6 /* ContainerViewControllerSampleTests.swift */; };
 		162184281CFFE831003440D6 /* ContainerViewControllerSampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162184271CFFE831003440D6 /* ContainerViewControllerSampleUITests.swift */; };
+		162184391CFFEF71003440D6 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 162184381CFFEF71003440D6 /* ContainerViewController.swift */; };
+		1621843B1CFFEF7E003440D6 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1621843A1CFFEF7E003440D6 /* ChildViewController.swift */; };
+		1621843D1CFFEF8B003440D6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1621843C1CFFEF8B003440D6 /* View.swift */; };
+		1621843F1CFFEFA7003440D6 /* Subview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1621843E1CFFEFA7003440D6 /* Subview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		162184231CFFE831003440D6 /* ContainerViewControllerSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContainerViewControllerSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		162184271CFFE831003440D6 /* ContainerViewControllerSampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewControllerSampleUITests.swift; sourceTree = "<group>"; };
 		162184291CFFE831003440D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		162184381CFFEF71003440D6 /* ContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		1621843A1CFFEF7E003440D6 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
+		1621843C1CFFEF8B003440D6 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		1621843E1CFFEFA7003440D6 /* Subview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,7 @@
 		162184061CFFE830003440D6 /* ContainerViewControllerSample */ = {
 			isa = PBXGroup;
 			children = (
+				162184351CFFEF50003440D6 /* Source */,
 				162184071CFFE831003440D6 /* AppDelegate.swift */,
 				162184091CFFE831003440D6 /* ViewController.swift */,
 				1621840B1CFFE831003440D6 /* Main.storyboard */,
@@ -123,6 +132,33 @@
 				162184291CFFE831003440D6 /* Info.plist */,
 			);
 			path = ContainerViewControllerSampleUITests;
+			sourceTree = "<group>";
+		};
+		162184351CFFEF50003440D6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				162184361CFFEF50003440D6 /* Controllers */,
+				162184371CFFEF50003440D6 /* Views */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		162184361CFFEF50003440D6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				162184381CFFEF71003440D6 /* ContainerViewController.swift */,
+				1621843A1CFFEF7E003440D6 /* ChildViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		162184371CFFEF50003440D6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1621843C1CFFEF8B003440D6 /* View.swift */,
+				1621843E1CFFEFA7003440D6 /* Subview.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +293,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1621840A1CFFE831003440D6 /* ViewController.swift in Sources */,
+				162184391CFFEF71003440D6 /* ContainerViewController.swift in Sources */,
+				1621843D1CFFEF8B003440D6 /* View.swift in Sources */,
+				1621843F1CFFEFA7003440D6 /* Subview.swift in Sources */,
 				162184081CFFE831003440D6 /* AppDelegate.swift in Sources */,
+				1621843B1CFFEF7E003440D6 /* ChildViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
