@@ -9,13 +9,33 @@
 import UIKit
 
 class View: UIView {
-
-    /*
-    // Only override drawRect: if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
-        // Drawing code
-    }
-    */
-
+	
+	weak var subview: Subview? {
+		didSet {
+			oldValue?.removeFromSuperview()
+			
+			if let view = self.subview {
+				self.addSubview(view)
+			}
+		}
+	}
+	
+	override func didMoveToSuperview() {
+		super.didMoveToSuperview()
+		self.backgroundColor = .whiteColor()
+	}
+	
+	override func layoutSubviews() {
+		super.layoutSubviews()
+		
+		if let view = self.subview {
+			let length = min(self.frame.width, self.frame.height) / 2
+			view.frame.size.width = length
+			view.frame.size.height = length
+			view.frame.origin.x = (self.frame.width - view.frame.width) / 2
+			view.frame.origin.y = (self.frame.height - view.frame.height) / 2
+			view.layer.cornerRadius = length / 2
+		}
+	}
+	
 }

@@ -9,27 +9,30 @@
 import UIKit
 
 class ChildViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+	
+	private lazy var subview: Subview = {
+		let view = Subview(frame: self.view.bounds)
+		return view
+	}()
+	
+	override func didMoveToParentViewController(parent: UIViewController?) {
+		super.didMoveToParentViewController(parent)
+		self.loadView()
+	}
+	
+	override func loadView() {
+		super.loadView()
+		self.view = self.subview
+		self.viewDidLoad()
+	}
+	
+	override func didReceiveMemoryWarning() {
+		super.didReceiveMemoryWarning()
+		// Dispose of any resources that can be recreated.
+	}
+	
+	override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+		print("Touches ended on child view controller")
+	}
+	
 }
